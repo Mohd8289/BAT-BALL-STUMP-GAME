@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAT BALL GAME</title>
+
+    <style>
+        #h1 {
+            text-align: center;
+            background-color: green;
+        }
+
+
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            /* İstediğiniz boyutta ayarlayabilirsiniz */
+            display: block;
+            margin: auto;
+        }
+
+        .image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 30px;
+
+        }
+
+
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: red;
+            /* Yazı rengini belirleyin */
+            font-size: 24px;
+            /* Yazı boyutunu ayarlayın */
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Yazıya gölge ekler */
+            text-align: center;
+
+
+        }
+
+        #ball {
+            margin-left: 40%;
+        }
+
+
+        /* #b{margin-right: 60%;} */
+
+        #bat {
+            margin-left: -41%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1 id="h1">BAT BALL STUMP GAME</h1>
+
+
+
+
+    <div class="image-container">
+
+        <img src="cricket pitch.png" alt="Resim" class="image">
+
+
+
+
+        <button class="text-overlay" id="bat" onclick=" 
+
+        //  const userChoiceMsg = 'YOU HAVE CHOSEN BAT';
+        
+
+            let randomNumber= Math.random() * 3;
+
+            var computerChoies;
+
+           if(randomNumber>0 && randomNumber<= 1){
+
+             computerChoies='bat';
+
+            // console.log('computerChoies is bat');
+           }
+
+
+
+           else if(randomNumber > 1 && randomNumber<= 2){
+
+            computerChoies='ball';
+        //    console.log('computerChoies is ball');
+        }
+           
+
+           else{ computerChoies='stump';
+
+        //    console.log('computerChoies is stump');//
+           }
+
+        //   const computerChoiesMsg = (`COMPUTER CHOICE IS ${computerChoies}`);
+
+         var resultMsg;
+
+           if (computerChoies==='ball') {
+            resultMsg ='USER WON.'
+           }
+           else if(computerChoies==='bat'){
+            resultMsg = `IT IS A TIE`;
+           }
+           else if(computerChoies==='stump'){
+            resultMsg='COMPUTER HAS WON'
+           }
+
+
+        //    else if(computerChoies==='stump'){
+        //     resultMsg = `COMPUTER HAS WON';
+        //    }
+
+
+        alert(`YOU HAVE CHOSEN BAT COMPUTER CHOICE IS ${computerChoies} AND ${resultMsg}`);
+
+ 
+            ">BAT</button>
+
+
+
+
+
+
+        <button class="text-overlay" id="ball" onclick=" 
+
+        //  const userChoiceMsg = 'YOU HAVE CHOSEN BAT';
+        
+
+             randomNumber= Math.random() * 3;
+
+            var computerChoies;
+
+           if(randomNumber>0 && randomNumber<= 1){
+
+             computerChoies='bat';
+
+            // console.log('computerChoies is bat');
+           }
+
+
+
+           else if(randomNumber > 1 && randomNumber<= 2){
+
+            computerChoies='ball';
+        //    console.log('computerChoies is ball');
+        }
+           
+
+           else{ computerChoies='stump';
+
+        //    console.log('computerChoies is stump');//
+           }
+
+        //   const computerChoiesMsg = (`COMPUTER CHOICE IS ${computerChoies}`);
+
+         var resultMsg;
+
+           if (computerChoies==='ball') {
+            resultMsg ='IT IS A TIE.'
+           }
+           else if(computerChoies==='bat'){
+            resultMsg = `COMPUTER HAS WON`;
+           }
+           else if(computerChoies==='stump'){
+            resultMsg='USER  WON'
+           }
+
+
+        //    else if(computerChoies==='stump'){
+        //     resultMsg = `COMPUTER HAS WON';
+        //    }
+
+
+        alert(`YOU HAVE CHOSEN BALL COMPUTER CHOICE IS ${computerChoies} AND ${resultMsg}`);
+
+ 
+            ">BALL</button>
+
+
+
+
+
+        <button class="text-overlay" id="stump" onclick=" 
+
+        //  const userChoiceMsg = 'YOU HAVE CHOSEN BAT';
+        
+
+             randomNumber= Math.random() * 3;
+
+            let computerChoies;
+
+           if(randomNumber>0 && randomNumber<= 1){
+
+             computerChoies='bat';
+
+            // console.log('computerChoies is bat');
+           }
+
+
+
+           else if(randomNumber > 1 && randomNumber<= 2){
+
+            computerChoies='ball';
+        //    console.log('computerChoies is ball');
+        }
+           
+
+           else{ computerChoies='stump';
+
+        //    console.log('computerChoies is stump');//
+           }
+
+        //   const computerChoiesMsg = (`COMPUTER CHOICE IS ${computerChoies}`);
+
+         let resultMsg;
+
+           if (computerChoies==='ball') {
+            resultMsg =' COMPUTER HAS WON '
+           }
+           else if(computerChoies==='bat'){
+            resultMsg = `USER WON.`;
+           }
+           else if(computerChoies==='stump'){
+            resultMsg='IT IS A TIE.'
+           }
+
+
+        //    else if(computerChoies==='stump'){
+        //     resultMsg = `COMPUTER HAS WON';
+        //    }
+
+
+        alert(`YOU HAVE CHOSEN STUMP COMPUTER CHOICE IS ${computerChoies} AND ${resultMsg}`);
+
+ 
+            ">STUMP</button>
+
+
+    </div>
+</body>
+
+</html>
